@@ -15,8 +15,6 @@ data class ResultProfile(
     var email: String,
     @SerializedName("gender")
     var gender: String,
-    @SerializedName("id")
-    var id: Id,
     @SerializedName("location")
     var location: Location,
     @SerializedName("login")

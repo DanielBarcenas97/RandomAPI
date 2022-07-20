@@ -10,5 +10,4 @@ class ProfileRepository {
         return api.getRandomUser()
     }
 
-
 }

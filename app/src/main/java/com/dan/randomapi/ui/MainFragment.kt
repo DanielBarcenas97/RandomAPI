@@ -67,9 +67,14 @@ class MainFragment : Fragment() {
     }
 
     private fun onClickItem(user: ResultProfile) {
-        val bundle = Bundle()
-        bundle.putParcelable("profile", user)
-        findNavController().navigate(R.id.action_mainFragment_to_detailFragment,bundle)
+        try {  //lo puse porque algunos datos llegan null
+            val bundle = Bundle()
+            bundle.putParcelable("profile", user)
+            findNavController().navigate(R.id.action_mainFragment_to_detailFragment,bundle)
+        }catch (e : Exception){
+            e.printStackTrace()
+        }
+
     }
 
     override fun onDestroyView() {
