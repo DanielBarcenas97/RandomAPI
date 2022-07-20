@@ -1,6 +1,6 @@
 package com.dan.randomapi.data.service
 
-import com.dan.randomapi.data.model.ResponseUserApi
+import com.dan.randomapi.data.model.ResponseRandom
 import com.dan.randomapi.data.network.Api
 import com.dan.randomapi.data.network.Retrofit
 import kotlinx.coroutines.CoroutineDispatcher
@@ -15,8 +15,7 @@ class RandomService(
     private val retrofit = Retrofit.getRetrofit()
     private val client = retrofit.create(Api::class.java)
 
-
-    suspend fun getRandomUser() : ResponseUserApi?{
+    suspend fun getRandomUser() : List<ResponseRandom>?{
         return withContext(dispatcher){
             val response = client.getRandomUser()
             response.body()

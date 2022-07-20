@@ -3,7 +3,7 @@ package com.dan.randomapi.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Result(
+data class ResultProfile(
     @SerializedName("cell")
     val cell: String,
     @SerializedName("dob")

@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import com.dan.randomapi.R
 import com.dan.randomapi.databinding.FragmentMainBinding
 
-
 class MainFragment : Fragment() {
 
     private var _binding: FragmentMainBinding? = null
