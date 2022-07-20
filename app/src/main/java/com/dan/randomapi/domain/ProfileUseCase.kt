@@ -3,12 +3,8 @@ package com.dan.randomapi.domain
 import com.dan.randomapi.data.model.ResultProfile
 import com.dan.randomapi.data.repository.ProfileRepository
 
-class ProfileUseCase {
+class ProfileUseCase(private val userRepository: ProfileRepository) {
 
-    private val repository = ProfileRepository()
-
-    suspend fun getAllProfiles() : List<ResultProfile>? {
-        return repository.getProfiles()
-    }
+    suspend operator fun invoke() : List<ResultProfile>? = userRepository.getProfiles()
 
 }

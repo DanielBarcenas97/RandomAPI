@@ -14,7 +14,10 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dan.randomapi.R
 import com.dan.randomapi.data.model.ResultProfile
+import com.dan.randomapi.data.repository.ProfileRepository
+import com.dan.randomapi.data.service.RandomService
 import com.dan.randomapi.databinding.FragmentMainBinding
+import com.dan.randomapi.domain.ProfileUseCase
 import com.dan.randomapi.ui.main.adapter.ProfileAdapter
 import kotlinx.coroutines.launch
 
@@ -22,7 +25,11 @@ class MainFragment : Fragment() {
 
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
-    private val viewModel : MainViewModel by viewModels()
+
+    private val viewModel : MainViewModel by viewModels{
+        val repository  = ProfileRepository(RandomService())
+        MainViewModel.MainViewModelFactory(ProfileUseCase(repository))
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
