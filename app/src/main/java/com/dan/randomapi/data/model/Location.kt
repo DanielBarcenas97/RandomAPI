@@ -1,8 +1,11 @@
 package com.dan.randomapi.data.model
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class Location(
     @SerializedName("city")
     val city: String,
@@ -16,4 +19,4 @@ data class Location(
     val street: Street,
     @SerializedName("timezone")
     val timezone: Timezone
-)
+): Parcelable

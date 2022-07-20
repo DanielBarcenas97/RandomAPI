@@ -1,8 +1,11 @@
 package com.dan.randomapi.data.model
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class Login(
     @SerializedName("md5")
     val md5: String,
@@ -18,4 +21,4 @@ data class Login(
     val username: String,
     @SerializedName("uuid")
     val uuid: String
-)
+): Parcelable

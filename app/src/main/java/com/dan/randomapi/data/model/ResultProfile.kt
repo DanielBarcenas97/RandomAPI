@@ -1,31 +1,34 @@
 package com.dan.randomapi.data.model
 
-
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+
+@Parcelize
 data class ResultProfile(
     @SerializedName("cell")
-    val cell: String,
+    var cell: String,
     @SerializedName("dob")
-    val dob: Dob,
+    var dob: Dob,
     @SerializedName("email")
-    val email: String,
+    var email: String,
     @SerializedName("gender")
-    val gender: String,
+    var gender: String,
     @SerializedName("id")
-    val id: Id,
+    var id: Id,
     @SerializedName("location")
-    val location: Location,
+    var location: Location,
     @SerializedName("login")
-    val login: Login,
+    var login: Login,
     @SerializedName("name")
-    val name: Name,
+    var name: Name,
     @SerializedName("nat")
-    val nat: String,
+    var nat: String,
     @SerializedName("phone")
-    val phone: String,
+    var phone: String,
     @SerializedName("picture")
-    val picture: Picture,
+    var picture: Picture,
     @SerializedName("registered")
-    val registered: Registered
-)
+    var registered: Registered
+): Parcelable

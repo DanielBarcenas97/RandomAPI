@@ -10,7 +10,9 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.dan.randomapi.R
 import com.dan.randomapi.data.model.ResultProfile
 import com.dan.randomapi.databinding.FragmentMainBinding
 import com.dan.randomapi.ui.adapter.ProfileAdapter
@@ -58,10 +60,16 @@ class MainFragment : Fragment() {
         }
     }
 
-    private fun setRecyclerData(dogsList: List<ResultProfile>) {
+    private fun setRecyclerData(list: List<ResultProfile>) {
         with(binding.recyclerView){
-            adapter = ProfileAdapter(dogsList)
+            adapter = ProfileAdapter(list){profile -> onClickItem(profile)}
         }
+    }
+
+    private fun onClickItem(user: ResultProfile) {
+        val bundle = Bundle()
+        bundle.putParcelable("profile", user)
+        findNavController().navigate(R.id.action_mainFragment_to_detailFragment,bundle)
     }
 
     override fun onDestroyView() {
