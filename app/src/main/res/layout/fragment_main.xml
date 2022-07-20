@@ -8,6 +8,24 @@
     android:background="@color/light_gray"
     tools:context=".ui.MainActivity">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:background="@color/purple_200"
+            android:layout_width="match_parent"
+            app:titleTextColor="@color/white"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Random Api" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/loadingAnim"
         android:layout_width="150dp"
@@ -26,12 +44,13 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:itemCount="10"
-        tools:listitem="@layout/item"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dimen10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        tools:itemCount="10"
+        tools:listitem="@layout/item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
