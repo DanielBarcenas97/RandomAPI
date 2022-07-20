@@ -3,6 +3,7 @@ package com.dan.randomapi.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.dan.randomapi.data.model.ResponseRandom
+import com.dan.randomapi.data.model.ResultProfile
 import com.dan.randomapi.domain.ProfileUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -28,7 +29,7 @@ class MainViewModel : ViewModel() {
 
     data class UiState(
         val loading : Boolean = false,
-        val listUsers : List<ResponseRandom>? = null
+        val listUsers : List<ResultProfile>? = null
     )
 
 }

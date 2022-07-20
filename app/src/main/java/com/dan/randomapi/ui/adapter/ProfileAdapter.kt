@@ -12,7 +12,7 @@ class ProfileAdapter(private val dogsList: List<ResultProfile>) : RecyclerView.A
     class ProfileViewHolder(private val itemBinding: ItemBinding) : RecyclerView.ViewHolder(itemBinding.root){
         fun bind(profile: ResultProfile) {
             Glide.with(itemView.context)
-                .load(profile.picture)
+                .load(profile.picture.large)
                 .centerCrop()
                 .into(itemBinding.ivPhoto)
             itemBinding.tvName.text = profile.name.toString()

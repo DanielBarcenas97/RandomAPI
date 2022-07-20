@@ -51,7 +51,7 @@ class MainFragment : Fragment() {
                 viewModel.state.collect{ state ->
                     binding.loadingAnim.isVisible = state.loading
                     state.listUsers?.let {
-                        setRecyclerData(it[0].results)
+                        setRecyclerData(it)
                     }
                 }
             }
