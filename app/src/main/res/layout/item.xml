@@ -24,7 +24,7 @@
         tools:scaleType="centerCrop"
         tools:src="@tools:sample/avatars" />
 
-    <Space
+    <View
         android:id="@+id/space"
         android:layout_width="0dp"
         android:layout_height="@dimen/dimen10dp"
