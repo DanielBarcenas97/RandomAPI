@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             app:titleTextColor="@color/icon_dark_dark"
             android:layout_height="?attr/actionBarSize"
-            app:title="Random Api" />
+            app:title="Profiles" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
