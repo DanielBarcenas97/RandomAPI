@@ -1,6 +1,6 @@
-package com.dan.randomapi.data
+package com.dan.randomapi.data.network
 
-import com.dan.randomapi.domain.Constants.Companion.URL_BASE
+import com.dan.randomapi.data.network.Constants.Companion.URL_BASE
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

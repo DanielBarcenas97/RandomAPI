@@ -1,4 +1,4 @@
-package com.dan.randomapi.domain.model
+package com.dan.randomapi.data.model
 
 
 import com.google.gson.annotations.SerializedName
