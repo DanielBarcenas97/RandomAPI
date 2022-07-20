@@ -1,4 +1,4 @@
-package com.dan.randomapi.ui
+package com.dan.randomapi.ui.detail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

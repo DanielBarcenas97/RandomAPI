@@ -1,4 +1,4 @@
-package com.dan.randomapi.ui.adapter
+package com.dan.randomapi.ui.main.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

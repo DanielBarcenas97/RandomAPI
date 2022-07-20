@@ -1,4 +1,4 @@
-package com.dan.randomapi.ui
+package com.dan.randomapi.ui.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.dan.randomapi.R
 import com.dan.randomapi.data.model.ResultProfile
 import com.dan.randomapi.databinding.FragmentMainBinding
-import com.dan.randomapi.ui.adapter.ProfileAdapter
+import com.dan.randomapi.ui.main.adapter.ProfileAdapter
 import kotlinx.coroutines.launch
 
 class MainFragment : Fragment() {

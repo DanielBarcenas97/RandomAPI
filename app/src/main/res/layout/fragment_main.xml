@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_gray"
+    android:background="@color/feedback_premium_light"
     tools:context=".ui.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -18,9 +18,9 @@
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
-            android:background="@color/purple_200"
+            android:background="@color/feedback_premium_dark"
             android:layout_width="match_parent"
-            app:titleTextColor="@color/white"
+            app:titleTextColor="@color/icon_dark_dark"
             android:layout_height="?attr/actionBarSize"
             app:title="Random Api" />
 

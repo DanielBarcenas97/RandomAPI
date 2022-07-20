@@ -1,4 +1,4 @@
-package com.dan.randomapi.ui
+package com.dan.randomapi.ui.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
